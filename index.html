@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DEITRUM Estilistas</title>
+  <meta name="description" content="DEITRUM Estilistas: premium minimalista, agenda por WhatsApp, opción Kids Zone." />
+
+  <!-- Fuentes (fallback elegante si no tenés Higuen/Garet instaladas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Top Glow -->
+  <div class="topGlow" aria-hidden="true"></div>
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="DEITRUM Estilistas Home">
+        <img class="brand__logo" src="./assets/logo.png" alt="DEITRUM Estilistas" />
+      </a>
+
+      <nav class="nav" aria-label="Menú principal">
+        <a href="#home">Home</a>
+        <a href="#aparal">Aparal</a>
+        <a href="#kidzone">Kidzone</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileNav" aria-hidden="true">
+      <a href="#home">Home</a>
+      <a href="#aparal">Aparal</a>
+      <a href="#kidzone">Kidzone</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__visual reveal">
+          <div class="hero__frame">
+            <img src="./assets/hero.jpg" alt="DEITRUM Estilistas - Visual" />
+            <div class="hero__badge">
+              <img src="./assets/isotipo.png" alt="Isotipo DEITRUM" />
+              <div>
+                <div class="badge__title">Premium minimalista</div>
+                <div class="badge__sub">Agenda por WhatsApp</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__content reveal">
+          <h1>Tu tiempo, con calma.</h1>
+          <p class="lead">
+            Reserva simple, atención clara y un estilo visual impecable. Si vienes con niños, también lo contemplamos.
+          </p>
+
+          <div class="card formCard">
+            <h2>Agendar cita</h2>
+            <p class="muted">Completa el formulario y te contactaremos por WhatsApp a la brevedad.</p>
+
+            <form id="bookingForm" class="form">
+              <div class="form__row">
+                <label>
+                  Nombre
+                  <input name="name" type="text" placeholder="Tu nombre" required />
+                </label>
+
+                <label>
+                  Contacto (WhatsApp)
+                  <input name="contact" type="tel" placeholder="+51 ..." required />
+                </label>
+              </div>
+
+              <div class="form__row">
+                <label>
+                  Día
+                  <input name="date" type="date" required />
+                </label>
+
+                <label>
+                  ¿Vienes con niños?
+                  <select name="kids" required>
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="No">No</option>
+                    <option value="Sí">Sí</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="form__row">
+                <label class="span2">
+                  Elegir servicio
+                  <select name="service" id="serviceSelect" required>
+                    <option value="" selected disabled>Seleccionar servicio</option>
+                    <!-- Se llena desde script.js para que coincida con Catálogo -->
+                  </select>
+                </label>
+              </div>
+
+              <div class="form__actions">
+                <button class="btn btnPrimary" type="submit">
+                  Enviar y continuar por WhatsApp
+                </button>
+                <p id="formNote" class="tiny muted">
+                  Al enviar, te contactaremos por WhatsApp a la brevedad.
+                </p>
+              </div>
+
+              <div id="formSuccess" class="success" hidden>
+                Listo ✅ Te contactaremos por WhatsApp a la brevedad.
+              </div>
+            </form>
+          </div>
+
+          <div class="miniStats reveal">
+            <div class="miniStats__item">
+              <div class="k">Express</div>
+              <div class="v">30–90 min</div>
+            </div>
+            <div class="miniStats__item">
+              <div class="k">Kids Zone</div>
+              <div class="v">Cupos limitados</div>
+            </div>
+            <div class="miniStats__item">
+              <div class="k">Proceso</div>
+              <div class="v">SOP estandarizado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APARAL -->
+    <section id="aparal" class="section">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>Aparal</h2>
+          <p class="muted">Espacios listos para que coloques imágenes y texto. Visual premium, sin ruido.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card mediaCard reveal">
+            <div class="mediaCard__img">
+              <img src="./assets/aparal-1.jpg" alt="Aparal imagen 1 (placeholder)" />
+            </div>
+            <h3>Antes / Después</h3>
+            <p class="muted">Coloca aquí resultados reales, transformaciones y estilo editorial.</p>
+          </article>
+
+          <article class="card mediaCard reveal">
+            <div class="mediaCard__img">
+              <img src="./assets/aparal-2.jpg" alt="Aparal imagen 2 (placeholder)" />
+            </div>
+            <h3>Proceso & Detalle</h3>
+            <p class="muted">Fotos de herramientas, manos, textura, terminaciones. Confianza visual.</p>
+          </article>
+
+          <article class="card mediaCard reveal">
+            <div class="mediaCard__img placeholder">
+              <div class="placeholder__inner">
+                <span>ESPACIO PARA IMAGEN</span>
+              </div>
+            </div>
+            <h3>Marca</h3>
+            <p class="muted">Aquí podés sumar filosofía, estética, backstage, equipo, etc.</p>
+          </article>
+        </div>
+
+        <div class="banner reveal">
+          <div class="banner__left">
+            <h3>Premium en lo simple</h3>
+            <p class="muted">Jerarquía clara. Atención calmada. Todo explicado y sin sorpresas.</p>
+          </div>
+          <div class="banner__right">
+            <a class="btn btnGhost" href="#catalogo">Ver Catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KIDZONE -->
+    <section id="kidzone" class="section kidzone">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>Kidzone</h2>
+          <p class="muted">Prospecto: servicios, condiciones y responsabilidades. Diseñado para transmitir tranquilidad.</p>
+        </div>
+
+        <div class="kidzone__grid">
+          <div class="card reveal">
+            <h3>Qué es Kidzone</h3>
+            <p>
+              Kidzone es un espacio de acompañamiento infantil pensado para que madres, padres o tutores
+              puedan realizar su servicio con mayor tranquilidad. Funciona con cupos, registro y reglas claras.
+            </p>
+            <ul class="bullets">
+              <li>Check-in/out controlado (registro + persona autorizada)</li>
+              <li>Declaración de alergias/sensibilidades</li>
+              <li>Cupos por horario (capacidad limitada)</li>
+              <li>Incidentes: protocolo de aviso inmediato + registro</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Condiciones (resumen)</h3>
+            <ul class="bullets">
+              <li><b>Edad sugerida:</b> (definir) y cupos por franja horaria.</li>
+              <li><b>Responsable:</b> el tutor debe permanecer en el local durante la estadía.</li>
+              <li><b>Salud:</b> no se admite ingreso con fiebre o síntomas evidentes. (Definir criterio)</li>
+              <li><b>Alergias:</b> se declaran en el check-in. Si no se declaran, el tutor asume responsabilidad.</li>
+              <li><b>Conducta:</b> si el menor presenta crisis/llanto persistente, se solicita retiro inmediato.</li>
+            </ul>
+            <p class="tiny muted">
+              Nota: estos lineamientos deben validarse según normativa municipal/local y asesoría legal en Perú.
+              El objetivo es seguridad, orden y tranquilidad.
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <h3>Responsabilidades y tranquilidad</h3>
+            <ul class="bullets">
+              <li><b>Registro:</b> nombre, edad, alergias, contacto, autorización de retiro.</li>
+              <li><b>Supervisión:</b> reglas de seguridad internas y visibilidad del área.</li>
+              <li><b>Objetos:</b> sin piezas pequeñas para menores (según rango de edad).</li>
+              <li><b>Datos:</b> uso interno para atención y seguridad (protección de datos).</li>
+              <li><b>Cierre elegante:</b> entrega solo a persona autorizada y verificación.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="kidzone__legal card reveal">
+          <h3>Documento de Servicios y Condiciones (para imprimir / PDF)</h3>
+          <p class="muted">
+            Este bloque está redactado como “texto base” para un documento formal. Puedes copiarlo y convertirlo en hoja de
+            condiciones de Kidzone.
+          </p>
+
+          <div class="legalBox">
+            <p><b>1) Registro y autorización:</b> El ingreso a Kidzone requiere registro del menor (nombre, edad, alergias y contacto).
+              El retiro se realiza únicamente por la persona autorizada en el registro, con verificación.</p>
+            <p><b>2) Permanencia del tutor:</b> El tutor responsable deberá permanecer dentro del local durante el servicio.</p>
+            <p><b>3) Salud y seguridad:</b> Por seguridad general, se podrá restringir el ingreso ante síntomas de enfermedad, fiebre,
+              o condiciones que comprometan el bienestar del menor o de terceros.</p>
+            <p><b>4) Alergias y sensibilidades:</b> El tutor declara alergias/condiciones relevantes. En caso de no declarar, el tutor
+              asume la responsabilidad sobre riesgos no informados.</p>
+            <p><b>5) Cupos y tiempos:</b> Kidzone opera con cupos limitados por horario. El tiempo de permanencia se ajusta a la cita.</p>
+            <p><b>6) Incidentes:</b> Ante incidentes menores, se informará al tutor de forma inmediata y se registrará internamente
+              (hora, descripción y acción tomada). Ante incidentes relevantes, se seguirá el protocolo de atención y derivación.</p>
+            <p><b>7) Protección de datos:</b> La información se utiliza únicamente para fines de seguridad y atención. (Agregar política formal).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="section">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>Catálogo</h2>
+          <p class="muted">Servicios descritos con claridad. Precios en blanco para que los edites después.</p>
+        </div>
+
+        <div class="catalogGrid" id="catalogGrid">
+          <!-- Se llena desde script.js para mantener consistencia con el selector -->
+        </div>
+
+        <div class="ctaRow reveal">
+          <div class="ctaRow__left">
+            <h3>¿Lista/o para reservar?</h3>
+            <p class="muted">Agenda por WhatsApp. Te respondemos rápido y sin complicaciones.</p>
+          </div>
+          <div class="ctaRow__right">
+            <a id="whatsAppBtn" class="btn btnPrimary" href="#" target="_blank" rel="noopener">
+              Continuar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>Contacto</h2>
+          <p class="muted">Deja todo listo aunque aún no tengan local confirmado.</p>
+        </div>
+
+        <div class="contactGrid">
+          <div class="card reveal">
+            <h3>Datos</h3>
+            <div class="infoList">
+              <div class="infoItem">
+                <span class="infoLabel">WhatsApp</span>
+                <span class="infoValue" id="waDisplay">+51 000 000 000</span>
+              </div>
+              <div class="infoItem">
+                <span class="infoLabel">Email</span>
+                <span class="infoValue">tuemail@dominio.com</span>
+              </div>
+              <div class="infoItem">
+                <span class="infoLabel">Ubicación</span>
+                <span class="infoValue">Por definir (Perú)</span>
+              </div>
+              <div class="infoItem">
+                <span class="infoLabel">Teléfono</span>
+                <span class="infoValue">(+51) 000 000 000</span>
+              </div>
+              <div class="infoItem">
+                <span class="infoLabel">Horario</span>
+                <span class="infoValue">Por definir</span>
+              </div>
+            </div>
+
+            <div class="contactActions">
+              <a class="btn btnGhost" href="#home">Volver al formulario</a>
+              <a id="whatsAppBtn2" class="btn btnPrimary" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>Notas rápidas</h3>
+            <ul class="bullets">
+              <li>Usa fotos limpias, con fondo oscuro o neutro.</li>
+              <li>1 idea por sección. Mucho aire.</li>
+              <li>CTA siempre a WhatsApp.</li>
+              <li>Precios: edítalos luego en el Catálogo (quedaron en blanco).</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer class="footer reveal">
+          <div class="footer__left">
+            <img class="footer__iso" src="./assets/isotipo.png" alt="Isotipo DEITRUM" />
+            <div>
+              <div class="footer__brand">DEITRUM Estilistas</div>
+              <div class="tiny muted">Premium minimalista | Perú</div>
+            </div>
+          </div>
+          <div class="footer__right tiny muted">
+            © <span id="year"></span> DEITRUM Estilistas. Todos los derechos reservados.
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+    </html>
